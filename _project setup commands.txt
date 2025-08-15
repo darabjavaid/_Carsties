@@ -35,3 +35,15 @@ AuctionService > dotnet ef database drop
 
 //ignore unnecessory dotnet project files
 > dotnet new gitignore 
+
+//stage files
+> git add .
+
+//commit 
+> git commit -m "end of section 2"
+
+// if your branch is master, change it to main as master decprecated in github using the command > git branch -M main
+
+> git remote add origin https://github.com/darabjavaid/Carsties.git
+
+>git push origin main
