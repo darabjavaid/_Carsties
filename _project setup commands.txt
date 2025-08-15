@@ -1,0 +1,37 @@
+//create new solution
+> dotnet new sln 
+
+// add new project -> webapi
+> dotnet new webapi -o src/AuctionService -controllers
+
+// add the project to solution
+> dotnet sln add src/AuctionService
+
+//debug 
+//goto project which you want to debug > cd src/AuctionService
+AuctionService > dotnet watch
+
+//check global tools list
+> dotnet tool list -g
+
+//install tool: dotnet-f globally
+> dotnet tool install dotnet-ef - g
+
+(//for tool update use > dotnet tool update dotnet-ef -g)
+
+//create db migrations
+AuctionService > dotnet ef migrations add "InitialCreate" -o Data/Migrations
+
+//run docker compose services // -d means no logs while docker running (make sure to run command in solution folder as docker-compose.yml file is there only)
+sln > docker compose up -d 
+
+AuctionService > dotnet ef database update
+
+//drop database
+AuctionService > dotnet ef database drop
+
+//enable source control - git
+> git init
+
+//ignore unnecessory dotnet project files
+> dotnet new gitignore 
