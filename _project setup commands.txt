@@ -11,6 +11,7 @@
 //goto project which you want to debug > cd src/AuctionService
 AuctionService > dotnet watch
 
+------------------------------------dotnet tools-------------------------
 //check global tools list
 > dotnet tool list -g
 
@@ -22,13 +23,24 @@ AuctionService > dotnet watch
 //create db migrations
 AuctionService > dotnet ef migrations add "InitialCreate" -o Data/Migrations
 
+----------------------------------docker---------------------------------
 //run docker compose services // -d means no logs while docker running (make sure to run command in solution folder as docker-compose.yml file is there only)
 sln > docker compose up -d 
 
 AuctionService > dotnet ef database update
 
 //drop database
-AuctionService > dotnet ef database drop
+AuctionService > dotnet ef database drop 
+
+// check volumns list
+> docker volume list
+
+//remove volume
+> docker volume rm carsties_mongodata
+
+//remove docker containers
+> docker compose down
+----------------------------------version control using git--------------
 
 //enable source control - git
 > git init
@@ -47,3 +59,15 @@ AuctionService > dotnet ef database drop
 > git remote add origin https://github.com/darabjavaid/Carsties.git
 
 >git push origin main
+
+--------------------------------search service api-------------------------
+
+> dotnet new webapi -o src/SearchService -controllers
+
+> dotnet sln add src/SearchService
+
+//    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=mongopw
+
+
