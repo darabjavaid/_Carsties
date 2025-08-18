@@ -68,6 +68,21 @@ AuctionService > dotnet ef database drop
 
 //    environment:
       - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=mongopw
+      - MONGO_INITDB_ROOT_PASSWORD=mongopwf
 
 
+----------------------Contracts class lib----------------
+
+> dotnet new classlib -o src/Contracts
+
+> dotnet sln add src/Contracts
+
+//add reference in both auction and search service
+
+AuctionService > dotnet add reference ../../src/Contracts
+SearchService  > dotnet add reference ../../src/Contracts
+
+
+-------------add outbox table migrations for AuctionService MassTransit------
+
+AuctionService > dotnet ef migrations add Outbox
