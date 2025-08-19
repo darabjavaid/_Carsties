@@ -83,6 +83,19 @@ AuctionService > dotnet add reference ../../src/Contracts
 SearchService  > dotnet add reference ../../src/Contracts
 
 
--------------add outbox table migrations for AuctionService MassTransit------
+--------------------------------------add outbox table migrations for AuctionService MassTransit------
 
 AuctionService > dotnet ef migrations add Outbox
+
+
+--------------------------------------install duende identity server----------------
+
+//isntall all templates for Duende Identity Server
+> dotnet new install Duende.Templates
+
+> dotnet new duende-is-aspid -o src/IdentityService
+
+> dotnet sln add src/IdentityService
+
+//add migrations (first remove the sqllite migrations folder)
+IdentityService > dotnet ef migrations add "InitialCreate" -o Data/Migrations
