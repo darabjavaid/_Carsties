@@ -31,6 +31,18 @@ public static class Config
                     new Secret("NotASecret".Sha256())
                 },
                 AllowedGrantTypes = {GrantType.ResourceOwnerPassword}                
+            },
+            new Client
+            {
+                ClientId = "nextApp",
+                ClientName = "nextApp",
+                ClientSecrets = {new Secret("secret".Sha256())},
+                AllowedGrantTypes = GrantTypes.CodeAndClientCredentials, // in case of mobile app, it should be GrandTypes.Code
+                RequirePkce = false, //required in case of mobile app
+                RedirectUris = { "https://localhost:3000/api/auth/callback/id-server" },
+                AllowOfflineAccess = true,
+                AllowedScopes = { "openid","profile","auctionApp" },
+                AccessTokenLifetime = 3600*24*30 // 30 days
             }
         };
 }

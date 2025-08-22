@@ -99,3 +99,10 @@ AuctionService > dotnet ef migrations add Outbox
 
 //add migrations (first remove the sqllite migrations folder)
 IdentityService > dotnet ef migrations add "InitialCreate" -o Data/Migrations
+
+
+--------------------------------------API Gateway--------------------------------------
+//simple web project only (not webapi project)
+> dotnet new web -o src/GatewayService
+
+> dotnet sln add src/GatewayService
