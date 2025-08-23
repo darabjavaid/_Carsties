@@ -106,3 +106,33 @@ IdentityService > dotnet ef migrations add "InitialCreate" -o Data/Migrations
 > dotnet new web -o src/GatewayService
 
 > dotnet sln add src/GatewayService
+
+-------------------------------------Containerize microservices------------------------
+create docker file in auction service
+
+> docker build -f src/AuctionService/Dockerfile -t testing123 .
+
+> docker run testing123
+
+# Copy Zscaler PEM certificates
+# download the zscalar certificate from: https://www.nuget.org/ with name as ZscalerRootCA.pem and put it in same sln folder
+COPY ZscalerRootCA.pem /usr/local/share/ca-certificates/ZscalerRootCA.crt
+
+# Update CA store in Linux container
+RUN update-ca-certificates
+
+
+> docker compose build auction-svc
+
+> docker compose up -d
+
+
+//repeat same for search and other services
+
+> docker compose build search-svc
+> docker compose build identity-svc
+
+> docker compose up -d
+
+//-v means remove volumes as well
+> docker compose up -v
