@@ -136,3 +136,37 @@ RUN update-ca-certificates
 
 //-v means remove volumes as well
 > docker compose up -v
+
+
+----------------------------------------------------------           ----------------------------------------------------------
+----------------------------------------------------------CLIENT SIDE----------------------------------------------------------
+
+>mkdir frontend
+>cd frontend
+
+frontend > npx create-next-app@latest
+
+frontend > web-app > npm run dev
+
+//remove the certificate issue
+run below query on CMD
+
+cmd > setx NODE_EXTRA_CA_CERTS "C:\Work\Learning\Udemy\Build Microservices with DotNet and NextJs\Carsties\ZscalerRootCA.pem"
+
+
+get icons 
+
+web-app > npm install react-icons
+web-app > npm install react-countdown
+
+//UI components libaray
+web-app > npx flowbite-react@latest init
+//if any issue while installing above flowbit, use direct below command to install the flowbite package
+web-app > npm install flowbite-react
+
+
+//install global state management libaray zustand
+web-app > npm install zustand
+
+// 
+web-app > npm install query-string

@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+/* added below config because in tailwind 4, pointer is not default on buttons */
+[role=button], button {
+  @apply cursor-pointer;
+}
