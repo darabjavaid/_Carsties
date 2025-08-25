@@ -39,10 +39,11 @@ public static class Config
                 ClientSecrets = {new Secret("secret".Sha256())},
                 AllowedGrantTypes = GrantTypes.CodeAndClientCredentials, // in case of mobile app, it should be GrandTypes.Code
                 RequirePkce = false, //required in case of mobile app
-                RedirectUris = { "https://localhost:3000/api/auth/callback/id-server" },
+                RedirectUris = { "http://localhost:3000/api/auth/callback/id-server" },
                 AllowOfflineAccess = true,
                 AllowedScopes = { "openid","profile","auctionApp" },
-                AccessTokenLifetime = 3600*24*30 // 30 days
+                AccessTokenLifetime = 3600*24*30, // 30 days
+                AlwaysIncludeUserClaimsInIdToken = true //
             }
         };
 }

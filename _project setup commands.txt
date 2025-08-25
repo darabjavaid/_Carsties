@@ -170,3 +170,18 @@ web-app > npm install zustand
 
 // 
 web-app > npm install query-string
+
+
+--------update service and build docker again for that service------
+> docker compose build search-svc
+> docker compose build identity-svc
+--------------------------------------------------------------------
+
+
+install nextAuth.js for authentication of client side
+//from: documentation @ https://authjs.dev/getting-started/installation?framework=Next.js
+//do all the steps mentioned in the documents, 
+web-app > npm install next-auth@beta
+web-app > npx auth secret
+
+//documentation from : > https://authjs.dev/getting-started/providers/duende-identity-server6
