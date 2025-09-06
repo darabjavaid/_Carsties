@@ -185,3 +185,18 @@ web-app > npm install next-auth@beta
 web-app > npx auth secret
 
 //documentation from : > https://authjs.dev/getting-started/providers/duende-identity-server6
+
+
+----------------------------------------------------------missing secret----------------------------------------------------------
+run below command to add auth secret key in .env.local file as this file is excluded from git ignore.
+
+web-app > npx auth secret
+---------------------------------------------------------------------------------------------------------------------------------
+for creating forms in web app (react)
+
+web-app > npm install react-hook-form react-datepicker
+
+react-hot-toast
+
+
+web-app > npm install react-hot-toast

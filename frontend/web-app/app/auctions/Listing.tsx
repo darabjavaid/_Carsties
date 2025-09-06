@@ -26,7 +26,9 @@ export default function Listing() {
     pageSize: state.pageSize,
     searchTerm: state.searchTerm,
     orderBy: state.orderBy,
-    filterBy: state.filterBy
+    filterBy: state.filterBy,
+    seller: state.seller,
+    winner: state.winner
   })));
   const setParams = useParamsStore((state) => state.setParams);
   const url = queryString.stringifyUrl({url:'', query: params}, {skipEmptyString: true});
