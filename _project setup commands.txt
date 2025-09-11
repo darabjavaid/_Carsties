@@ -39,7 +39,7 @@ AuctionService > dotnet ef database drop
 > docker volume rm carsties_mongodata
 
 //remove docker containers
-> docker compose down
+> docker compose down -v
 ----------------------------------version control using git--------------
 
 //enable source control - git
@@ -206,4 +206,10 @@ web-app > npm install react-hot-toast
 
 > dotnet new webapi -o src/BiddingService -controllers
 > dotnet sln add src/BiddingService
-BiddingService > dotnet add reference ../../Contracts
+BiddingService > dotnet add reference ../../src/Contracts
+
+----------------------------------------NotificationService----------------------------------------
+
+> dotnet new web -o src/NotificationService
+> dotnet sln add src/NotificationService
+NotificationService > dotnet add reference ../../src/Contracts

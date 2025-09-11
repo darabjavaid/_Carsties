@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayService", "src\Gatew
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiddingService", "src\BiddingService\BiddingService.csproj", "{0CC22C52-FE67-48A1-9F5A-021FB621BAC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "src\NotificationService\NotificationService.csproj", "{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,18 @@ Global
 		{0CC22C52-FE67-48A1-9F5A-021FB621BAC5}.Release|x64.Build.0 = Release|Any CPU
 		{0CC22C52-FE67-48A1-9F5A-021FB621BAC5}.Release|x86.ActiveCfg = Release|Any CPU
 		{0CC22C52-FE67-48A1-9F5A-021FB621BAC5}.Release|x86.Build.0 = Release|Any CPU
+		{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E}.Debug|x64.Build.0 = Debug|Any CPU
+		{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E}.Debug|x86.Build.0 = Debug|Any CPU
+		{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E}.Release|x64.ActiveCfg = Release|Any CPU
+		{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E}.Release|x64.Build.0 = Release|Any CPU
+		{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E}.Release|x86.ActiveCfg = Release|Any CPU
+		{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,5 +124,6 @@ Global
 		{C62459D2-FBB7-4403-AB13-91108327B9F5} = {12C4AEA7-F424-43DC-9526-121753213AD0}
 		{4B9834F8-13C9-4BE6-AE1C-D3F324DD47D2} = {12C4AEA7-F424-43DC-9526-121753213AD0}
 		{0CC22C52-FE67-48A1-9F5A-021FB621BAC5} = {12C4AEA7-F424-43DC-9526-121753213AD0}
+		{CCBBD421-5C0B-4772-BBD0-446DD17DCA2E} = {12C4AEA7-F424-43DC-9526-121753213AD0}
 	EndGlobalSection
 EndGlobal
