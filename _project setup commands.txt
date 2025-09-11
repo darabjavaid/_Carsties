@@ -213,3 +213,12 @@ BiddingService > dotnet add reference ../../src/Contracts
 > dotnet new web -o src/NotificationService
 > dotnet sln add src/NotificationService
 NotificationService > dotnet add reference ../../src/Contracts
+
+
+---------------
+//date format package for react
+web-app > npm install date-fns
+
+//signlR package
+web-app > npm install @microsoft/signalr
+
